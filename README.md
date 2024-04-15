@@ -57,11 +57,17 @@
 ### 14. git merge <name>
 > 合并某分支`<name>`到当前分支
 > 如果当前分支和某分支有一样地方但不同的修改，则会有冲突，详见[这里](https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344)
+>> 通常，合并分支时，如果可能，Git会用`Fast forward`模式，但这种模式下，**删除**分支后，会**丢掉分支信息**。
+>>
+>> 如果要强制禁用`Fast forward`模式，Git就会在`merge`时生成一个**新的commit**，这样，从分支历史上就可以看出分支信息。
+>> **`git merge --no-ff -m "信息" dev`** `--no-ff`参数，表示禁用`Fast forward`
+>> 因为会产生一个新的commit，所以也需要-m
 ### 15. git remote show
 > 产看远程主机名字
 
 ### 补充
 #### 1.分支管理策略
+
 
 
 
