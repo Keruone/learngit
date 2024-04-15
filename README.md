@@ -47,14 +47,23 @@
 ### 10. git checkout -b <name> 或 git switch -c <name>
 > 创建+切换分支
 ### 11. git branch
-> 查看分支。
-### 12。 git branch <name>
+> 查看分支(本地)。
+> `-a` 查看本地和远程的所有分支
+> `-r` 查看远程
+### 12. git branch <name>
 > 创建分支
 ### 13. git branch -d <name>
 > 删除分支
 ### 14. git merge <name>
 > 合并某分支`<name>`到当前分支
 > 如果当前分支和某分支有一样地方但不同的修改，则会有冲突，详见[这里](https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344)
+### 15. git remote show
+> 产看远程主机名字
+
+### 补充
+#### 1.分支管理策略
+
+
 
 
 ## 三、Git SSH提交方式
