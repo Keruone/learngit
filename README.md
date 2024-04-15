@@ -28,35 +28,33 @@
 > 将文件添加到暂存区
 ### 3. git -commit -m "一些你觉得值得写的信息(必填)"
 > 将暂存区的文件提交到仓库
-### 4. git -restore
+### 4. git -push <远程主机名> <本地分支名>:<远程分支名>
+> 
+### 5. git -restore
 > 可以将更改但未`git -commit`的文件还原。
-### 5.git log
+### 6.git log
 > `git log`命令显示从最近到最远的提交日志.
 > 每个版本一个专属ID
 > 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上`--pretty=online`参数
 > `git log --graph`可以产看到分支合并图
-### 6.git reset --hard '版本'
+### 7.git reset --hard '版本'
 > 首先，Git必须知道当前版本是哪个版本，在Git中，用`HEAD`表示,当前版本上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个^比较容易数不过来，所以写成`HEAD~100`。
 > 版本号也可以填写 `git log`中看到的十六进制ID(不用打全，只要输出开头几位即可)
-### 7. git reflog
+### 8. git reflog
 > 当忘记了新版本ID，想回到新版本，但当前不在新版本，可以使用该命令。该命令记录了你的每一次命令
-### 8. git -checkout <name> 或 git switch <name>
+### 9. git -checkout <name> 或 git switch <name>
 > 切换分支
-### 9. git checkout -b <name> 或 git switch -c <name>
+### 10. git checkout -b <name> 或 git switch -c <name>
 > 创建+切换分支
-### 10. git branch
+### 11. git branch
 > 查看分支。
-### 11。 git branch <name>
+### 12。 git branch <name>
 > 创建分支
-### 12. git branch -d <name>
+### 13. git branch -d <name>
 > 删除分支
-### 13. git merge <name>
-> 合并某分支到当前分支
-<<<<<<< HEAD
-### 14. 切换分支可以在文中明显看出不同
-=======
-### 14. git 冲突示例
->>>>>>> feature1
+### 14. git merge <name>
+> 合并某分支`<name>`到当前分支
+> 如果当前分支和某分支有一样地方但不同的修改，则会有冲突，详见[这里](https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344)
 
 
 ## 三、Git SSH提交方式
