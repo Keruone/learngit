@@ -39,11 +39,18 @@
 > 版本号也可以填写 `git log`中看到的十六进制ID(不用打全，只要输出开头几位即可)
 ### 7. git reflog
 > 当忘记了新版本ID，想回到新版本，但当前不在新版本，可以使用该命令。该命令记录了你的每一次命令
-### 8. git -checkout ‘+分支名’
-> 切换与创建分支
-### 9. git branch
-> 列出所有分支，当前分支前面会标一个`*`号。
-###
+### 8. git -checkout <name> 或 git switch <name>
+> 切换分支
+### 9. git checkout -b <name> 或 git switch -c <name>
+> 创建+切换分支
+### 10. git branch
+> 查看分支。
+### 11。 git branch <name>
+> 创建分支
+### 12. git branch -d <name>
+> 删除分支
+### 13. git merge <name>
+> 合并某分支到当前分支
 
 ## 三、Git SSH提交方式
 ### 1. SSH简介
