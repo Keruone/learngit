@@ -97,10 +97,20 @@
 > 可以使得提交分支更为美观，详情参考[这里](https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648)(这里没太仔细去看desu，挠头)
 ### 26. git tag < tag名称 > < commit id >
 > 设置标签。默认 (不设置commit id) 标签是打在最新**已**提交的commit上的。否则就标签在对应的commit上
+> > 注意：标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。
+> * 命令`git tag <tagname>`用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+> * 命令`git tag -a <tagname> -m "blablabla..."`可以指定标签信息；
+> * 命令`git tag`可以查看所有标签。
+### 27. git show < commit id 或 tag >
+> 查看指定的提交信息，若什么都不填，则show最近的一次commit。
+### 28. git tag -d < tagname >
+> 删除标签，因为创建的标签都只存储在本地，不会自动推送到远程。
+### 29. git push origin < tagname >
+> 推送某个标签到远程,如果参数填 --tags，则提交全部尚未推送到远程的本地标签
+### 30. git push origin :refs/tags/< tagname >
+> 删除一个远程标签
 
-
-
-
+看来这么多命令，想不想来一个[总结](https://liaoxuefeng.gitee.io/resource.liaoxuefeng.com/git/git-cheat-sheet.pdf)？不得不说廖雪峰大大的git教程太强了
 
 ## 三、Git SSH提交方式
 ### 1. SSH简介
@@ -134,8 +144,11 @@ id_ed25519.pub
 
 ### 4. 多人合作出问题了可以参考[这里](https://www.liaoxuefeng.com/wiki/896043488029600/900375748016320)和[这里](https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648)
 
+### 5. 设置忽略提交文件可以看[这里](https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208)
 
+### 6. 搭建Git服务器看[这里](https://www.liaoxuefeng.com/wiki/896043488029600/899998870925664)
 
+### 7. 配置命令别名看[这里](https://www.liaoxuefeng.com/wiki/896043488029600/898732837407424)
 
 
 ## 参考文献
@@ -147,3 +160,4 @@ id_ed25519.pub
 
 <div id="refer-anchor-3"></div>
 - [3] [Markdown官方教程](https://markdown.com.cn/basic-syntax/blockquotes.html)
+
